@@ -6,6 +6,7 @@ React native component which is developed to check user internet connection and 
 
 ## how to use
 
+put it in your root file , like App.js or index.js
 ```
 import NetStatus from './components/internetStatus';
 
