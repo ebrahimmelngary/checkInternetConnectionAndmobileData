@@ -2,7 +2,7 @@
 React native component which is developed to check user internet connection and mobile data usage.
 
 ## example
-![Image of Example](https://user-images.githubusercontent.com/5220867/93060597-f2fda500-f6a4-11ea-8f25-9720c2d62551.gif)
+![Image of Example](https://user-images.githubusercontent.com/5220867/93062184-2b05e780-f6a7-11ea-85cc-7a876297bd87.gif)
 
 ## how to use
 
