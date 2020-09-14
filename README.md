@@ -11,6 +11,8 @@ import NetStatus from './components/internetStatus';
 
 <NetStatus />
 
+```
+
 ## dependencies
 Install react-native-netinfo from https://github.com/react-native-community/react-native-netinfo
 
