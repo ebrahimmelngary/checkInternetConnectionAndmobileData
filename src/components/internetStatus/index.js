@@ -1,20 +1,27 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, StyleSheet, Text, Platform, Alert} from 'react-native';
 import {useNetInfo} from '@react-native-community/netinfo';
 
 const NetStatus = () => {
+  const [isConnected, setIsConnected] = useState(false);
+
   const netInfo = useNetInfo();
   useEffect(() => {
     if (netInfo.type === 'cellular') {
-      return Alert.alert('Attention', 'You are using mobile data', [
-        {text: 'Ok'},
-      ]);
+      return Alert.alert(
+        'Attention',
+        'No wifi connection, you’ve switched to mobile data',
+        [{text: 'Ok'}],
+      );
     }
+    setTimeout(() => {
+      setIsConnected(true);
+    }, 1000);
   }, [netInfo.type]);
 
   return (
     <>
-      {!netInfo.isConnected && (
+      {isConnected && !netInfo.isConnected && (
         <View style={styles.container}>
           <View style={styles.connection}>
             <Text style={styles.text}>No Internet Connection</Text>
